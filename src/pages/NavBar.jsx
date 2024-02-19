@@ -25,10 +25,10 @@ export default function Header() {
           smooth={true}
           offset={-70}
           duration={500}
-          to="heroSection"
+          to="about-me"
           className="navbar-link"
         >
-          Meine Projekte
+          About Me
         </Link>
         <Link
           activeClass="navbar-active-link"
@@ -36,10 +36,10 @@ export default function Header() {
           smooth={true}
           offset={-70}
           duration={500}
-          to="heroSection"
+          to="skills"
           className="navbar-link"
         >
-          Über Mich
+          My Skills
         </Link>
         <Link
           activeClass="navbar-active-link"
@@ -47,10 +47,10 @@ export default function Header() {
           smooth={true}
           offset={-70}
           duration={500}
-          to="heroSection"
+          to="projects"
           className="navbar-link"
         >
-          Kontakt
+          My Projects
         </Link>
         <Link
           activeClass="navbar-active-link"
@@ -58,10 +58,10 @@ export default function Header() {
           smooth={true}
           offset={-70}
           duration={500}
-          to="heroSection"
+          to="contact"
           className="navbar-link"
         >
-          Impressum
+          Contact
         </Link>
       </nav>
       <div className="hamburger" onClick={toggleMenu}>

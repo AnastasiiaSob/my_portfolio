@@ -4,7 +4,7 @@ import myPhoto from '../assets/logo192.png'
 
 export default function AboutMe() {
   return (
-    <section className="about-me">
+    <section id='about-me' className="about-me">
       <div className="greeting">
         <h1>Anastasiia here! 🧡</h1>
       </div>
