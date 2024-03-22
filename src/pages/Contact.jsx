@@ -4,7 +4,7 @@ import { SocialIcon } from 'react-social-icons'
 
 export default function Contact() {
   return (
-    <section id='contact' className="contact">
+    <section id='contact' className="contact wrapper">
       <div className="contact-info">
         <h2>Get in touch with me</h2>
         <p>

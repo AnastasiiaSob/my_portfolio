@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Skills() {
     return(
-        <section id="skills" className='skills'>
+        <section id="skills" className='skills wrapper'>
             <div className='skills-header'>
                 <h2>These are my skills</h2>
                 <p>So much skills, so many smArT</p>

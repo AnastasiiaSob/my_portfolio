@@ -3,20 +3,33 @@ html {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/public/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: url('/public/fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold.ttf');
+}
+
 body {
   margin: 0;
-  font-family: Verdana, sans-serif;
+  font-family: OpenSans, sans-serif;
   font-size: 15px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
 :root {
-  --primary: #50bada;
-  --heading-color: #682938;
-  --bg-shade: #f5fcff;
-  --darkblue: #1c1e53;
+  --primary: #ff7f23;
+  --bg-grey: #f6f6f6;
   --black: #000000;
   --white: #ffffff;
 }
@@ -27,24 +40,32 @@ body {
   min-height: 100vh;
 }
 
+.wrapper {
+  padding: 0 8rem;
+}
+
 .navbar {
-  height: 60px;
+  height: 8rem;
   display: flex;
-  background-color: rgb(115, 39, 52);
+  background-color: var(--bg-grey);
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
-  position: sticky;
-  top: 0;
+}
+
+.navbar-elements {
+  display: flex;
+  gap: 3rem;
 }
 
 .navbar-link {
-  color: var(--primary);
+  color: var(--black);
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .navbar-link:hover {
-  color: var(--white);
+  color: var(--primary);
   cursor: pointer;
 }
 
@@ -53,22 +74,23 @@ body {
   gap: 3rem;
 }
 
-.hamburger {
+.hamburger,
+.nav-close {
   display: none; /* Hide hamburger icon on larger screens */
 }
 
 .about-me {
   display: flex;
-  width: 100%;
-  background-color: var(--bg-shade);
+  background-color: var(--bg-grey);
   flex-direction: column;
-  padding: 3rem 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   gap: 1rem;
 }
 
 .greeting {
   display: flex;
-  justify-content: center;
+  font-family: IBMPlexMono;
 }
 
 .about-me-info {
@@ -83,14 +105,9 @@ body {
   justify-content: center;
 }
 
-.text-wrapper {
-  margin-left: 11rem;
-}
-
 .skills {
   display: flex;
-  width: 100%;
-  background-color: var(--bg-shade);
+  background-color: var(--bg-grey);
   flex-direction: column;
   align-items: center;
   padding-bottom: 5rem;
@@ -100,14 +117,13 @@ body {
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 3rem 0;
 }
 
 .projects {
   display: flex;
-  width: 100%;
-  background-color: var(--bg-shade);
+  background-color: var(--bg-grey);
   flex-direction: column;
   padding-bottom: 5rem;
 }
@@ -116,20 +132,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 10rem;
 }
 
 .projects-list {
   display: flex;
-  margin: 2rem 5rem;
+  margin: 2rem 0;
+  gap: 1rem;
 }
 
 .contact {
   display: flex;
-  width: 100%;
-  background-color: var(--bg-shade);
+  background-color: var(--bg-grey);
   align-items: center;
-  padding: 0 5rem;
   padding-bottom: 5rem;
 }
 
@@ -137,7 +151,7 @@ body {
   display: flex;
   flex-basis: 100%;
   flex-direction: column;
-  margin-left: 2rem;
+  margin-left: 5rem;
 }
 
 .contact-info {
@@ -151,7 +165,7 @@ body {
   display: flex;
   width: 100%;
   height: 10rem;
-  background-color: var(--heading-color);
+  background-color: var(--bg-grey);
   margin-top: auto;
   flex-direction: column;
   justify-content: center;
@@ -166,16 +180,38 @@ body {
 @media screen and (max-width: 768px) {
   .hamburger {
     display: block;
-    color: var(--primary);
-    /* Add hamburger icon styling here */
   }
 
-  .menu.open {
-    display: flex;
-    gap: 0.7rem;
+  .hamburger,
+  .nav-close {
+    cursor: pointer;
+    color: var(--primary);
   }
 
   .menu {
-    display: none;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background-color: var(--bg-grey);
+    height: 100%;
+    padding: 6rem 3rem 0;
+    position: fixed;
+    right: -100%;
+    top: 110px;
+    transition: right 0.4s;
+    width: 40%;
+  }
+
+  .menu.open {
+    right: 0;
+  }
+
+  .navbar-elements {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-link {
+    margin-right: unset;
+    margin-top: 22px;
   }
 }
