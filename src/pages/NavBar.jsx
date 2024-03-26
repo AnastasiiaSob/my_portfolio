@@ -1,6 +1,5 @@
 import '../styles.css'
 import React, { useState, useEffect } from 'react'
-import { Squash as Hamburger } from 'hamburger-react'
 import { Link } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -21,7 +20,7 @@ export default function Header() {
 
   return (
     <header className="navbar wrapper">
-      <img src={logoImage} alt="logo" width="100" height="100" />
+      <img src={logoImage} alt="logo" width="110" height="110" />
       <nav className={`menu ${isMenuOpen ? 'open' : ''}`}>
         <div className='navbar-elements'>
         <Link activeClass="navbar-active-link" spy={true} smooth={true} offset={-70} duration={500} to="about-me" className="navbar-link" onClick={closeMenuOnMobile}>
