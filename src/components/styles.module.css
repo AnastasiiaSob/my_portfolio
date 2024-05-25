@@ -4,3 +4,13 @@
     align-items: center;
     cursor: pointer;
 }
+
+.container {
+    background-color: aquamarine;
+    padding: 5rem 2rem;
+    border-radius: 2rem;
+}
+
+ul {
+    list-style: none;
+}

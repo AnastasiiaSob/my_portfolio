@@ -12,6 +12,7 @@
 /build
 
 src/assets
+public/
 
 # misc
 .DS_Store
