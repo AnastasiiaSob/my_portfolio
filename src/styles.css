@@ -159,6 +159,7 @@ h1 span {
 
 .projects-list {
   display: flex;
+  flex-direction: column;
   margin: 2rem 0;
   gap: 1rem;
 }
