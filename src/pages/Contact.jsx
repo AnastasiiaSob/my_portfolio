@@ -1,10 +1,10 @@
 import '../styles.css'
 import React from 'react'
-import { SocialIcon } from 'react-social-icons'
+import ContactForm from './../components/ContactForm'
 
-export default function Contact() {
+function Contact() {
   return (
-    <section id='contact' className="contact wrapper">
+    <section id="contact" className="contact wrapper">
       <div className="contact-info">
         <h2>Get in touch with me</h2>
         <p>
@@ -13,15 +13,10 @@ export default function Contact() {
         </p>
       </div>
       <div className="contact-buttons">
-        <div>
-          <SocialIcon url="https://mail.google.com/" target="_blank" />
-          <p>Write me an Email</p>
-        </div>
-        <div>
-          <SocialIcon url="https://www.linkedin.com/in/anastasiia-ried/" target="_blank" />
-          <p>Contact me via LinkedIn</p>
-        </div>
+        <ContactForm />
       </div>
     </section>
   )
 }
+
+export default Contact

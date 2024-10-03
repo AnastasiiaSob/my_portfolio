@@ -2,12 +2,14 @@ import '../styles.css'
 import React from 'react'
 import myPhoto from '../assets/avatar_2.png'
 
-export default function AboutMe() {
+function AboutMe() {
   return (
-    <section id='about-me' className="about-me wrapper">
+    <section id="about-me" className="about-me wrapper">
       <div className="about-me-info">
         <div className="about-me-text">
-        <h1><span>{"<"}</span>Anastasiia<span>{">"}</span> here!</h1>
+          <h1>
+            <span>{'<'}</span>Anastasiia<span>{'>'}</span> here!
+          </h1>
           <div className="text-wrapper">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quam laudantium, dolor voluptate voluptas, vero cumque ad,
@@ -28,3 +30,5 @@ export default function AboutMe() {
     </section>
   )
 }
+
+export default AboutMe

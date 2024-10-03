@@ -3,15 +3,15 @@ import React from 'react'
 import SkillBars from '../components/SkillBars.jsx'
 
 const SKILLS = [
-  {type: "HTML", level: 99},
-  {type: "CSS", level: 98},
-  {type: "JavaScript", level: 87},
-  {type: "Flutter", level: 45},
-  {type: "React", level: 20},
-  {type: "Java", level: 14}
-];
+  { type: 'HTML', level: 99 },
+  { type: 'CSS', level: 98 },
+  { type: 'JavaScript', level: 87 },
+  { type: 'Flutter', level: 45 },
+  { type: 'React', level: 20 },
+  { type: 'Java', level: 14 },
+]
 
-export default function Skills() {
+function Skills() {
   return (
     <section id="skills" className="skills wrapper">
       <div className="skills-header">
@@ -22,3 +22,5 @@ export default function Skills() {
     </section>
   )
 }
+
+export default Skills
