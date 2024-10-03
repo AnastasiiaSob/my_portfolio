@@ -2,12 +2,12 @@
   cursor: pointer;
 }
 
-.projectImage img{
+.projectImage img {
   border-radius: 8px;
   width: 100%;
-	display: block;
-	aspect-ratio: 1 / 1;
-	object-fit: cover;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 ul {
@@ -38,18 +38,6 @@ li {
   }
 }
 
-span {
-  position: absolute;
-  right: 10px;
-  display: inline-block;
-  width: 30px;
-  top: 11px;
-  text-align: right;
-  font-weight: normal;
-  color: #fff;
-  font-size: 11px;
-}
-
 .contactFormContainer {
   max-width: 500px;
   margin: 0 auto;
@@ -62,7 +50,8 @@ label {
   font-weight: bold;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   margin-top: 8px;
@@ -94,6 +83,3 @@ button:hover {
   font-weight: bold;
   margin-bottom: 16px;
 }
-
-
-

@@ -4,7 +4,7 @@ import ProjectItem from '../components/ProjectItem'
 import landwirtschaft from '../assets/projects/landwirtschaft.jpg'
 import tourism from '../assets/projects/urlaub.jpg'
 import petproject from '../assets/projects/pet-project.jpg'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 const mockProjectsData = [
   { id: 1, title: 'Portfolio Website', description: 'A personal portfolio to showcase my projects.', image: landwirtschaft },
@@ -14,7 +14,7 @@ const mockProjectsData = [
 
 function ProjectsOverview() {
   const [projects, setProjects] = useState([])
-  const navigate = useNavigate(); // Initialize the navigate hook
+  const navigate = useNavigate() // Initialize the navigate hook
 
   const fetchProjects = () => {
     setTimeout(() => {
@@ -23,8 +23,8 @@ function ProjectsOverview() {
   }
 
   const handleNavigate = () => {
-    navigate('/projects'); // Programmatically navigate to the '/projects' page
-  };
+    navigate('/projects') // Programmatically navigate to the '/projects' page
+  }
 
   useEffect(() => {
     fetchProjects()
