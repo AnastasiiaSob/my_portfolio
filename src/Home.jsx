@@ -1,17 +1,15 @@
 import AboutMe from './pages/AboutMe'
 import Skills from './pages/Skills'
-import Projects from './pages/Projects'
+import ProjectsOverview from './pages/ProjectsOverview'
 import Contact from './pages/Contact'
-import Footer from './pages/Footer'
 
 function Home() {
   return (
     <>
       <AboutMe />
       <Skills />
-      <Projects />
+      <ProjectsOverview />
       <Contact />
-      <Footer />
     </>
   )
 }

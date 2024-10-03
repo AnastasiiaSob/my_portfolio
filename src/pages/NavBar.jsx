@@ -4,13 +4,35 @@ import { Link } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import logoImage from '../assets/logo_ried.svg'
+import { useNavigate } from 'react-router-dom';
+
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
+
+  const navigateHome = () => {
+    navigate('/');
+  };
+
+  const navigateAboutMe = () => {
+    navigate('/about-me');
+    closeMenuOnMobile()
+  };
+
+  const navigateProjects = () => {
+    navigate('/projects');
+    closeMenuOnMobile()
+  };
+
+  const navigateContact = () => {
+    navigate('/contact');
+    closeMenuOnMobile()
+  };
 
   const closeMenuOnMobile = () => {
     if (window.innerWidth <= 1150) {
@@ -20,59 +42,31 @@ function Header() {
 
   return (
     <header className="navbar wrapper">
-      <img src={logoImage} alt="logo" width="110" height="110" />
+      <img src={logoImage} alt="logo" width="110" height="110" onClick={navigateHome}/>
       <nav className={`menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="navbar-elements">
           <Link
-            activeClass="navbar-active-link"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
             to="about-me"
             className="navbar-link"
-            onClick={closeMenuOnMobile}
+            onClick={navigateAboutMe}
           >
             About Me
           </Link>
           <Link
-            activeClass="navbar-active-link"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            to="skills"
-            className="navbar-link"
-            onClick={closeMenuOnMobile}
-          >
-            My Skills
-          </Link>
-          <Link
-            activeClass="navbar-active-link"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
             to="projects"
             className="navbar-link"
-            onClick={closeMenuOnMobile}
+            onClick={navigateProjects}
           >
             My Projects
           </Link>
           <Link
-            activeClass="navbar-active-link"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
             to="contact"
             className="navbar-link"
-            onClick={closeMenuOnMobile}
+            onClick={navigateContact}
           >
             Contact
           </Link>
         </div>
-        {/* <FontAwesomeIcon icon="fa-solid fa-xmark" className='nav-close' onClick={toggleMenu}/>*/}
       </nav>
       <FontAwesomeIcon icon={faBars} className="hamburger" onClick={toggleMenu} />
     </header>

@@ -1,8 +1,3 @@
-html {
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: 'OpenSans';
   src: url('/public/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
@@ -13,13 +8,33 @@ html {
   src: url('/public/fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold.ttf');
 }
 
-body {
+html, body {
+  padding: 0;
   margin: 0;
+  height:100%;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {  
   font-family: OpenSans, sans-serif;
   font-size: 15px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.wrapper {
+  padding: 0 10rem;
 }
 
 h1 {
@@ -47,10 +62,6 @@ h1 span {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.wrapper {
-  padding: 0 10rem;
 }
 
 .navbar {
@@ -95,6 +106,7 @@ h1 span {
   flex-direction: column;
   padding-bottom: 3rem;
   gap: 1rem;
+  flex: 1;
 }
 
 .about-me-info {
@@ -149,6 +161,7 @@ h1 span {
   background-color: var(--bg-grey);
   flex-direction: column;
   padding-bottom: 5rem;
+  flex: 1;
 }
 
 .projects-header {
@@ -159,7 +172,7 @@ h1 span {
 
 .projects-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 2rem 0;
   gap: 1rem;
 }
@@ -169,6 +182,7 @@ h1 span {
   background-color: var(--bg-grey);
   align-items: center;
   padding-bottom: 5rem;
+  flex: 1;
 }
 
 .contact-buttons {

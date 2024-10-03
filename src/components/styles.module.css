@@ -1,7 +1,5 @@
 .projectItem {
-  display: grid;
   cursor: pointer;
-  grid-template-columns: 1fr 2fr;
 }
 
 .projectImage img{
