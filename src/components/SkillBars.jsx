@@ -3,6 +3,12 @@ import styles from './styles.module.css'
 
 // Class components: older, more complex, use this, lifecycle methods.
 // Functional components: modern, simpler, use Hooks for state and side effects.
+
+// In React there are three kinds of inputs that you can read while rendering: props, state, and context. 
+// You should always treat these inputs as read-only.
+
+// When you want to change something in response to user input, you should set state instead of writing to a variable. 
+// You should never change preexisting variables or objects while your component is rendering.
   class SkillBars extends React.Component {
   constructor(props) {
     super(props);
