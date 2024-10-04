@@ -215,6 +215,10 @@ h1 span {
   gap: 3rem;
 }
 
+.navbar img {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .hamburger {
     display: block;
@@ -252,4 +256,5 @@ h1 span {
     margin-right: unset;
     margin-top: 22px;
   }
+
 }
