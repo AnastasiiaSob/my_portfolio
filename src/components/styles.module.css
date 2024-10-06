@@ -83,3 +83,9 @@ button:hover {
   font-weight: bold;
   margin-bottom: 16px;
 }
+
+.pictureOfTheDay {
+  width: 100%;
+  height: auto;
+  position: relative;
+}

@@ -1,6 +1,7 @@
 import '../styles.css'
 import React from 'react'
 import myPhoto from '../assets/avatar_2.png'
+import PictureOfTheDay from '../components/PictureOfTheDay'
 
 function AboutMe() {
   return (
@@ -27,6 +28,7 @@ function AboutMe() {
           </div>
         </div>
       </div>
+      <PictureOfTheDay />
     </section>
   )
 }
