@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './styles.module.css'
 
 // The main difference between React class components and functional components is
 // how they manage state and lifecycle methods.

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import styles from './styles.module.css'
 
 function ContactForm() {
   const [formData, setFormData] = useState({ name: '', topic: '', email: '', message: '' })
