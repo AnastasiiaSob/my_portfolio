@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import styles from './styles.module.css'
 import { Skeleton } from '@mui/material'
 
 function PictureOfTheDay() {
@@ -13,7 +12,7 @@ function PictureOfTheDay() {
   }, [])
 
   return (
-    <div className={styles.pictureOfTheDay}>
+    <div className="picture-of-the-day">
       {loading && <Skeleton variant="rectangular" width="100%" height={300} />}
       <img
         src={pictureOfTheDay}

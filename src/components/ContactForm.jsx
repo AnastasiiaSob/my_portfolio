@@ -43,32 +43,32 @@ function ContactForm() {
   }
 
   return (
-    <div className={styles.contactFormContainer}>
+    <div className="contact-form-container">
       <h2>Contact Me</h2>
       <form onSubmit={handleSubmit}>
         {successMessage !== '' ? (
-          <p className={styles.successMessage}>{successMessage}</p>
+          <p className="success-message">{successMessage}</p>
         ) : (
           <div>
             <div className="name">
               <label>Name</label>
               <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" />
-              {formErrors.name && <p className={styles.error}>{formErrors.name}</p>}
+              {formErrors.name && <p className="error">{formErrors.name}</p>}
             </div>
             <div className="topic">
               <label>Topic</label>
               <input type="text" name="topic" value={formData.topic} onChange={handleChange} placeholder="Job offer" />
-              {formErrors.topic && <p className={styles.error}>{formErrors.topic}</p>}
+              {formErrors.topic && <p className="error">{formErrors.topic}</p>}
             </div>
             <div className="email">
               <label>Your E-Mail</label>
               <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Job offer" />
-              {formErrors.email && <p className={styles.error}>{formErrors.email}</p>}
+              {formErrors.email && <p className="error">{formErrors.email}</p>}
             </div>
             <div className="message">
               <label>Your message</label>
               <textarea name="message" placeholder="Your message" value={formData.message} onChange={handleChange} />
-              {formErrors.message && <p className={styles.error}>{formErrors.message}</p>}
+              {formErrors.message && <p className="error">{formErrors.message}</p>}
             </div>
             <button type="submit">Submit</button>
           </div>

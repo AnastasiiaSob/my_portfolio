@@ -9,12 +9,12 @@ Functional components: modern, simpler, use Hooks for state and side effects.
  */
 function ProjectItem({ image, title, description }) {
   return (
-    <div className={styles.projectItem}>
-      <div className={styles.projectImage}>
+    <div className="project-item">
+      <div className="project-image">
         <img src={image} alt="project-logo" />
       </div>
 
-      <div className={styles.projectText}>
+      <div className="project-text">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>

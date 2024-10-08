@@ -1,6 +1,4 @@
 import React from 'react'
-import styles from './styles.module.css'
-
 // Class components: older, more complex, use this, lifecycle methods.
 // Functional components: modern, simpler, use Hooks for state and side effects.
 
@@ -26,12 +24,12 @@ class SkillBars extends React.Component {
     const { hue, saturation, skills } = this.props
 
     return (
-      <div id="app" className={`${styles.skillsContainer} ${collapsed ? styles.collapsed : ''}`}>
+      <div id="app" className={`skillsContainer ${collapsed ? "collapsed" : ''}`}>
         <p>
           Set the Hue and Saturation on the <code>&lt;SkillBars /&gt;</code> instance and let the component deal with the shades
         </p>
         <hr />
-        <ul className={styles.skillsBars}>
+        <ul className="skills-bars">
           {skills.map((skill, index) => (
             <li
               key={skill.type}

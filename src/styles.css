@@ -8,6 +8,13 @@
   src: url('/public/fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold.ttf');
 }
 
+:root {
+  --primary: #ff7f23;
+  --bg-grey: #f6f6f6;
+  --black: #000000;
+  --white: #ffffff;
+}
+
 html,
 body {
   padding: 0;
@@ -48,15 +55,51 @@ h2 {
   margin: 0;
 }
 
-:root {
-  --primary: #ff7f23;
-  --bg-grey: #f6f6f6;
-  --black: #000000;
-  --white: #ffffff;
+ul {
+  list-style: none;
+}
+
+li {
+  display: block;
+  position: relative;
+  background-color: #888;
+  color: #fff;
+  margin: 10px 0;
+  transition: width 400ms ease-in-out;
+  .collapsed & {
+    width: 0 !important;
+  }
 }
 
 h1 span {
   color: var(--primary);
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 
 .app {
@@ -185,11 +228,10 @@ h1 span {
   flex: 1;
 }
 
-.contact-buttons {
+.contact-form {
   display: flex;
   flex-basis: 100%;
   flex-direction: column;
-  margin-left: 5rem;
 }
 
 .contact-info {
@@ -218,6 +260,56 @@ h1 span {
 .navbar img {
   cursor: pointer;
 }
+
+.project-item {
+  cursor: pointer;
+}
+
+.project-image img {
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.skills-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.skills-bars {
+  margin: 0 0 30px 0;
+  padding: 0;
+  width: calc(100% - 50px);
+}
+
+.contact-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.picture-of-the-day {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
 
 @media screen and (max-width: 768px) {
   .hamburger {
@@ -258,3 +350,4 @@ h1 span {
   }
 
 }
+
