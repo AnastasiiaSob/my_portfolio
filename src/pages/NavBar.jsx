@@ -14,44 +14,33 @@ function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const navigateHome = () => {
-    navigate('/')
-  }
-
-  const navigateAboutMe = () => {
-    navigate('/about-me')
-    closeMenuOnMobile()
-  }
-
-  const navigateProjects = () => {
-    navigate('/projects')
-    closeMenuOnMobile()
-  }
-
-  const navigateContact = () => {
-    navigate('/contact')
-    closeMenuOnMobile()
-  }
-
   const closeMenuOnMobile = () => {
     if (window.innerWidth <= 1150) {
       setIsMenuOpen(false)
     }
   }
 
+  const routerNavigate = (section) => {
+      navigate(`/${section}`)
+      closeMenuOnMobile()
+  }
+
   return (
     <header className="navbar wrapper">
-      <img src={logoImage} alt="logo" width="110" height="110" onClick={navigateHome} />
+      <img src={logoImage} alt="logo" width="110" height="110" onClick={() => routerNavigate('')} />
       <nav className={`menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="navbar-elements">
-          <Link to="about-me" className="navbar-link" onClick={navigateAboutMe}>
+          <Link to="about-me" className="navbar-link" onClick={() => routerNavigate('about-me')}>
             About Me
           </Link>
-          <Link to="projects" className="navbar-link" onClick={navigateProjects}>
+          <Link to="projects" className="navbar-link" onClick={() => routerNavigate('projects')}>
             My Projects
           </Link>
-          <Link to="contact" className="navbar-link" onClick={navigateContact}>
+          <Link to="contact" className="navbar-link" onClick={() => routerNavigate('contact')}>
             Contact
+          </Link>
+          <Link to="impressum" className="navbar-link" onClick={() => routerNavigate('impressum')}>
+            Impressum
           </Link>
         </div>
       </nav>

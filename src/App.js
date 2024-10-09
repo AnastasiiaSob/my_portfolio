@@ -5,6 +5,7 @@ import AboutMe from './pages/AboutMe'
 import Contact from './pages/Contact'
 import Footer from './pages/Footer'
 import NavBar from './pages/NavBar'
+import NotFound from './pages/NotFound'
 import ProjectsDetail from './pages/ProjectsDetails'
 import './styles.css'
 
@@ -17,10 +18,11 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="*" element={<div> 404 Not Found</div>}></Route>
+            <Route path="*" element={<NotFound />}></Route>
             <Route path="/projects" element={<ProjectsDetail />}></Route>
             <Route path="/about-me" element={<AboutMe />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/impressum" element={<h2> Impressum </h2>}></Route>
           </Routes>
           <Footer />
         </div>
