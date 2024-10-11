@@ -1,4 +1,5 @@
-import '../styles.css'
+import './../styles/styles.css'
+import './../styles/styles.css'
 import React from 'react'
 import ContactForm from './../components/ContactForm'
 

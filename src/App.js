@@ -7,7 +7,7 @@ import Footer from './pages/Footer'
 import NavBar from './pages/NavBar'
 import NotFound from './pages/NotFound'
 import ProjectsDetail from './pages/ProjectsDetails'
-import './styles.css'
+import './styles/styles.css'
 
 function App() {
   return (

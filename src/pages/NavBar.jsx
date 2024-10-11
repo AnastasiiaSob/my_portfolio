@@ -1,4 +1,4 @@
-import '../styles.css'
+import './../styles/styles.css'
 import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

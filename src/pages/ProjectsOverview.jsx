@@ -1,4 +1,4 @@
-import '../styles.css'
+import './../styles/styles.css'
 import React, { useEffect, useState } from 'react'
 import ProjectItem from '../components/ProjectItem'
 import landwirtschaft from '../assets/projects/landwirtschaft.jpg'

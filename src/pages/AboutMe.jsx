@@ -1,4 +1,4 @@
-import '../styles.css'
+import './../styles/styles.css'
 import React from 'react'
 import myPhoto from '../assets/avatar_2.png'
 import PictureOfTheDay from '../components/PictureOfTheDay'
