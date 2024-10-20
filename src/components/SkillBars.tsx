@@ -1,4 +1,5 @@
 import React from 'react'
+import { SkillType } from '../pages/Skills';
 // Class components: older, more complex, use this, lifecycle methods.
 // Functional components: modern, simpler, use Hooks for state and side effects.
 
@@ -7,8 +8,16 @@ import React from 'react'
 
 // When you want to change something in response to user input, you should set state instead of writing to a variable.
 // You should never change preexisting variables or objects while your component is rendering.
-class SkillBars extends React.Component {
-  constructor(props) {
+
+export type SkillBarsProps = {
+	hue?: string,
+	saturation?: string,
+	skills: SkillType[],
+};
+
+
+class SkillBars extends React.Component<SkillBarsProps, {collapsed: boolean}> {
+  constructor(props: SkillBarsProps) {
     super(props)
     this.state = { collapsed: true }
   }
@@ -20,6 +29,7 @@ class SkillBars extends React.Component {
   }
 
   render() {
+
     const { collapsed } = this.state
     const { hue, saturation, skills } = this.props
 
@@ -30,14 +40,14 @@ class SkillBars extends React.Component {
         </p>
         <hr />
         <ul className="skills-bars">
-          {skills.map((skill, index) => (
+          {skills.map((item, index) => (
             <li
-              key={skill.type}
-              style={{ width: `${skill.level}%`, backgroundColor: `hsl(${hue}, ${saturation}%, ${100 / (index + 3.5)}%)` }}
+              key={item.skill}
+              style={{ width: `${item.level}%`, backgroundColor: `hsl(${hue}, ${saturation}%, ${100 / (index + 3.5)}%)` }}
             >
               <p>
-                {skill.type}
-                <span>{skill.level}</span>
+                {item.skill}
+                <span>{item.level}</span>
               </p>
             </li>
           ))}

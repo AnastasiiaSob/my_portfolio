@@ -1,10 +1,18 @@
 import './../styles/styles.css'
 import React, { useEffect, useState } from 'react'
 import ProjectItem from '../components/ProjectItem'
+import { useNavigate } from 'react-router-dom'
 import landwirtschaft from '../assets/projects/landwirtschaft.jpg'
 import tourism from '../assets/projects/urlaub.jpg'
 import petproject from '../assets/projects/pet-project.jpg'
-import { useNavigate } from 'react-router-dom'
+
+
+export type ProjectType = {
+  id: number,
+  title: string,
+  description: string,
+  image: string
+}
 
 const mockProjectsData = [
   { id: 1, title: 'Portfolio Website', description: 'A personal portfolio to showcase my projects.', image: landwirtschaft },
@@ -13,7 +21,7 @@ const mockProjectsData = [
 ]
 
 function ProjectsOverview() {
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState<ProjectType[]>([])
   const navigate = useNavigate() // Initialize the navigate hook
 
   const fetchProjects = () => {

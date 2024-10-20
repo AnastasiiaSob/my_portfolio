@@ -7,7 +7,7 @@ import React from 'react'
 Functional components: modern, simpler, use Hooks for state and side effects.
  */
 function ProjectItem({ image, title, description }) {
-  return (
+  return(
     <div className="project-item">
       <div className="project-image">
         <img src={image} alt="project-logo" />

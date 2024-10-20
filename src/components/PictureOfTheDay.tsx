@@ -7,7 +7,7 @@ function PictureOfTheDay() {
 
   useEffect(() => {
     fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-      .then((response) => response.json())
+      .then((response: Response) => response.json())
       .then((data) => setPictureOfTheDay(data.url))
   }, [])
 

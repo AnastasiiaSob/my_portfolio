@@ -1,14 +1,19 @@
 import './../styles/styles.css'
 import React from 'react'
-import SkillBars from '../components/SkillBars.jsx'
+import SkillBars from '../components/SkillBars'
+
+export type SkillType = {
+  skill: string,
+  level: number
+}
 
 const SKILLS = [
-  { type: 'HTML', level: 99 },
-  { type: 'CSS', level: 98 },
-  { type: 'JavaScript', level: 87 },
-  { type: 'Flutter', level: 45 },
-  { type: 'React', level: 20 },
-  { type: 'Java', level: 14 },
+  { skill: 'HTML', level: 99 },
+  { skill: 'CSS', level: 98 },
+  { skill: 'JavaScript', level: 87 },
+  { skill: 'Flutter', level: 45 },
+  { skill: 'React', level: 20 },
+  { skill: 'Java', level: 14 },
 ]
 
 function Skills() {

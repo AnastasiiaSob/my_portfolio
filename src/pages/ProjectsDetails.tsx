@@ -1,10 +1,10 @@
 import './../styles/styles.css'
 import React, { useEffect, useState } from 'react'
 import ProjectItem from '../components/ProjectItem'
+import { ProjectType } from './ProjectsOverview'
 import landwirtschaft from '../assets/projects/landwirtschaft.jpg'
 import tourism from '../assets/projects/urlaub.jpg'
 import petproject from '../assets/projects/pet-project.jpg'
-import { useNavigate } from 'react-router-dom';
 
 const mockProjectsData = [
   { id: 1, title: 'Portfolio Website', description: 'A personal portfolio to showcase my projects.', image: landwirtschaft },
@@ -13,7 +13,7 @@ const mockProjectsData = [
 ]
 
 function ProjectsDetail() {
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState<ProjectType[]>([])
  // Initialize the navigate hook
 
   const fetchProjects = () => {
@@ -38,7 +38,7 @@ function ProjectsDetail() {
       <div className="projects-list">
         {/** image and text are props in ProjectItem component */}
         {projects.length
-          ? projects.map((project) => (
+          ? projects.map((project: ProjectType) => (
               <ProjectItem key={project.id} image={project.image} title={project.title} description={project.description} />
             ))
           : null}

@@ -1,8 +1,23 @@
+import React from 'react'
 import { useEffect, useState } from 'react'
 
+interface FormData {
+  name: string, 
+  topic: string,
+  email: string,
+  message: string
+}
+
+interface FormErrors {
+  name?: string, 
+  topic?: string,
+  email?: string,
+  message?: string
+}
+
 function ContactForm() {
-  const [formData, setFormData] = useState({ name: '', topic: '', email: '', message: '' })
-  const [formErrors, setFormErrors] = useState({})
+  const [formData, setFormData] = useState<FormData>({ name: '', topic: '', email: '', message: '' })
+  const [formErrors, setFormErrors] = useState<FormErrors>({})
   const [successMessage, setSuccessMessage] = useState('')
 
   // to see immediate changes on formData
@@ -19,8 +34,8 @@ function ContactForm() {
     })
   }
 
-  const validateForm = () => {
-    let errors = {}
+  const validateForm = (): FormErrors => {
+    let errors: FormErrors = {};
     if (!formData.name) errors.name = 'Name if requred!'
     if (!formData.topic) errors.topic = 'Topic is required'
     if (!formData.email) errors.email = 'Email is required'
@@ -30,7 +45,7 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const errors = validateForm()
+    const errors: FormErrors = validateForm()
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors)
       setSuccessMessage('')
