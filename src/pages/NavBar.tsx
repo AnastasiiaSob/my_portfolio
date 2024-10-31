@@ -2,7 +2,7 @@ import './../styles/styles.css'
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import logoImage from '../assets/logo_ried.svg'
+import logoImage from '../assets/logo_black.svg'
 import { useNavigate } from 'react-router-dom'
 
 function Header() {
@@ -26,20 +26,20 @@ function Header() {
 
   return (
     <header className="navbar wrapper">
-      <img src={logoImage} alt="logo" width="110" height="110" onClick={() => routerNavigate('')} />
+      <img src={logoImage} alt="logo" width="140" height="140" onClick={() => routerNavigate('')} />
       <nav className={`menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="navbar-elements">
           <div className="navbar-link" onClick={() => routerNavigate('about-me')}>
-            About Me
+            ABOUT ME
           </div>
           <div className="navbar-link" onClick={() => routerNavigate('projects')}>
-            My Projects
+            PROJECTS
           </div>
           <div className="navbar-link" onClick={() => routerNavigate('contact')}>
-            Contact
+            CONTACT
           </div>
           <div className="navbar-link" onClick={() => routerNavigate('impressum')}>
-            Impressum
+            IMPRESSUM
           </div>
         </div>
       </nav>

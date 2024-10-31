@@ -1,7 +1,6 @@
 import './../styles/styles.css'
 import React from 'react'
 import myPhoto from '../assets/avatar_2.png'
-import PictureOfTheDay from '../components/PictureOfTheDay'
 
 function AboutMe() {
   return (
@@ -9,16 +8,11 @@ function AboutMe() {
       <div className="about-me-info">
         <div className="about-me-text">
           <h1>
-            <span>{'<'}</span>Anastasiia<span>{'>'}</span> here!
+          Frontend <span>Developer</span> <br />& IT-<span>Consultant</span>
           </h1>
           <div className="text-wrapper">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quam laudantium, dolor voluptate voluptas, vero cumque ad,
-              autem sunt voluptatem sapiente maxime suscipit doloremque delectus corrupti sint quas deleniti facilis!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, deserunt vel aliquid esse similique accusantium deleniti
-              impedit ab exercitationem omnis! Nemo adipisci est in itaque. Nesciunt ullam minima neque. Ullam.
+            I love when IT meets business and makes it work like magic.
             </p>
           </div>
         </div>
@@ -28,7 +22,6 @@ function AboutMe() {
           </div>
         </div>
       </div>
-      <PictureOfTheDay />
     </section>
   )
 }

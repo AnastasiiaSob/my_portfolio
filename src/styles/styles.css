@@ -9,8 +9,11 @@
 }
 
 :root {
-  --primary: #ff7f23;
-  --bg-grey: #f6f6f6;
+  --primary-light: #ff7f23;
+  --primary-dark: #994c15;
+  --secondary-grey: #393838;
+  --bg-grey-dark: #232323;
+  --bg-grey-light: #303030;
   --black: #000000;
   --white: #ffffff;
 }
@@ -20,6 +23,12 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #303030, #232323);
 }
 
 html {
@@ -46,13 +55,18 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin: 0;
 }
 
 h2 {
   font-size: 2rem;
   margin: 0;
+}
+
+.text-wrapper {
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 ul {
@@ -72,7 +86,7 @@ li {
 }
 
 h1 span {
-  color: var(--primary);
+  color: var(--primary-light);
 }
 
 label {
@@ -111,7 +125,6 @@ button:hover {
 .navbar {
   height: 8rem;
   display: flex;
-  background-color: var(--bg-grey);
   justify-content: space-between;
   align-items: center;
 }
@@ -122,14 +135,14 @@ button:hover {
 }
 
 .navbar-link {
-  color: var(--black);
+  color: var(--white);
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .navbar-link:hover {
-  color: var(--primary);
+  color: var(--primary-light);
   cursor: pointer;
 }
 
@@ -145,10 +158,9 @@ button:hover {
 
 .about-me {
   display: flex;
-  background-color: var(--bg-grey);
   flex-direction: column;
   padding-bottom: 3rem;
-  gap: 1rem;
+  padding-top: 3rem;
   flex: 1;
 }
 
@@ -161,31 +173,29 @@ button:hover {
 .about-me-text {
   display: flex;
   flex-basis: 100%;
-  justify-content: center;
   flex-direction: column;
+  color: var(--white);
 }
 
 .about-me-foto {
   display: flex;
   flex-basis: 100%;
-  justify-content: center;
-  margin-right: -10rem;
+  justify-content: right;
 }
 
 .foto-wrapper {
-  text-align: right;
   align-self: center;
 }
 
 .foto-wrapper img {
-  max-width: 80%;
-  max-height: 80%;
-  border-radius: 8px 0 0 8px;
+  height: 30rem;
+  width: 30rem;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 .skills {
   display: flex;
-  background-color: var(--bg-grey);
   flex-direction: column;
   align-items: center;
   padding-bottom: 5rem;
@@ -201,7 +211,6 @@ button:hover {
 
 .projects {
   display: flex;
-  background-color: var(--bg-grey);
   flex-direction: column;
   padding-bottom: 5rem;
   flex: 1;
@@ -222,7 +231,6 @@ button:hover {
 
 .contact {
   display: flex;
-  background-color: var(--bg-grey);
   align-items: center;
   padding-bottom: 5rem;
   flex: 1;
@@ -310,7 +318,6 @@ button:hover {
   position: relative;
 }
 
-
 @media screen and (max-width: 768px) {
   .hamburger {
     display: block;
@@ -319,13 +326,12 @@ button:hover {
   .hamburger,
   .nav-close {
     cursor: pointer;
-    color: var(--primary);
+    color: var(--primary-light);
   }
 
   .menu {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background-color: var(--bg-grey);
     height: 100%;
     padding: 6rem 3rem 0;
     position: fixed;
@@ -348,6 +354,4 @@ button:hover {
     margin-right: unset;
     margin-top: 22px;
   }
-
 }
-

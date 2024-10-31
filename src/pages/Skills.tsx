@@ -2,6 +2,33 @@ import './../styles/styles.css'
 import React from 'react'
 import SkillBars from '../components/SkillBars'
 
+/**
+ * 1. Frontend-Technologien
+    JavaScript/TypeScript
+    HTML
+    CSS
+    Web Components
+    React
+
+  2. Testing
+    Cypress.io
+    JUnit
+
+  3. Versionierung und Zusammenarbeit
+    Git
+    Kanban
+    Scrum
+    Jira
+
+  4. Mobile und Cross-Platform
+    Flutter
+
+  5. Backend-Grundkenntnisse
+    Python
+    Java
+ * 
+ */
+
 export type SkillType = {
   skill: string,
   level: number
