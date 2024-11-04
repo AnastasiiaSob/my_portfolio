@@ -1,6 +1,8 @@
 import './../styles/styles.css'
 import React from 'react'
 import SkillBars from '../components/SkillBars'
+import SkillsBox from '../components/SkillsBox'
+import logoFE from '../assets/logo_short.svg'
 
 /**
  * 1. Frontend-Technologien
@@ -50,7 +52,7 @@ function Skills() {
         <h2>These are my skills</h2>
         <p>This section is made using useState and useEffect React Hooks.</p>
       </div>
-      <SkillBars hue="287" saturation="100" skills={SKILLS} />
+      <SkillsBox title={'Frontend'} skillsIcon={logoFE} skills={SKILLS}/>
     </section>
   )
 }
