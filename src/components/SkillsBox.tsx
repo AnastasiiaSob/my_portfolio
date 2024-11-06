@@ -5,13 +5,13 @@ function SkillsBox({ skillsIcon, title, skills }) {
     <div className="skills-container">
       <img className="skill-icon" src={skillsIcon} alt="skill-icon" />
       <h3>{title}</h3>
-      <ul className="skills-bars">
+      <div className="skills-list">
         {skills.map((item, index) => (
-          <li key={item.skill}>
-            <p>{item.skill}</p>
-          </li>
+          <p key={item.skill} className='skills-item'>
+            {item.skill}
+          </p>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }

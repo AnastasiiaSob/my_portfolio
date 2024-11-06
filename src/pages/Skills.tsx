@@ -1,6 +1,5 @@
 import './../styles/styles.css'
 import React from 'react'
-import SkillBars from '../components/SkillBars'
 import SkillsBox from '../components/SkillsBox'
 import logoFE from '../assets/logo_short.svg'
 
@@ -32,7 +31,7 @@ import logoFE from '../assets/logo_short.svg'
  */
 
 export type SkillType = {
-  skill: string,
+  skill: string
   level: number
 }
 
@@ -49,10 +48,19 @@ function Skills() {
   return (
     <section id="skills" className="skills wrapper">
       <div className="skills-header">
-        <h2>These are my skills</h2>
+        <h2>What I offer</h2>
         <p>This section is made using useState and useEffect React Hooks.</p>
       </div>
-      <SkillsBox title={'Frontend'} skillsIcon={logoFE} skills={SKILLS}/>
+
+      <div className="skills-boxes">
+        <SkillsBox title={'Frontend'} skillsIcon={logoFE} skills={SKILLS} />
+        <SkillsBox title={'Testing'} skillsIcon={logoFE} skills={SKILLS} />
+        <SkillsBox title={'Versionierung und Zusammenarbeit'} skillsIcon={logoFE} skills={SKILLS} />
+        <SkillsBox title={'Mobile und Cross-Platform'} skillsIcon={logoFE} skills={SKILLS} />
+        <SkillsBox title={'Backend-Grundkenntnisse'} skillsIcon={logoFE} skills={SKILLS} />
+      </div>
+
+      
     </section>
   )
 }

@@ -8,7 +8,7 @@ import petproject from '../assets/projects/pet-project.jpg'
 
 
 export type ProjectType = {
-  id: number,
+  readonly id: number,
   title: string,
   description: string,
   image: string
