@@ -6,11 +6,14 @@ function SkillsBox({ skillsIcon, title, skills }) {
       <img className="skill-icon" src={skillsIcon} alt="skill-icon" />
       <h3>{title}</h3>
       <div className="skills-list">
+        <ul>
         {skills.map((item, index) => (
-          <p key={item.skill} className='skills-item'>
+          <li key={item.skill} className='skills-item'>
             {item.skill}
-          </p>
+          </li>
         ))}
+        </ul>
+        
       </div>
     </div>
   )

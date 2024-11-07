@@ -55,8 +55,8 @@ function Skills() {
       <div className="skills-boxes">
         <SkillsBox title={'Frontend'} skillsIcon={logoFE} skills={SKILLS} />
         <SkillsBox title={'Testing'} skillsIcon={logoFE} skills={SKILLS} />
-        <SkillsBox title={'Versionierung und Zusammenarbeit'} skillsIcon={logoFE} skills={SKILLS} />
-        <SkillsBox title={'Mobile und Cross-Platform'} skillsIcon={logoFE} skills={SKILLS} />
+        <SkillsBox title={'Versionierung & Zusammenarbeit'} skillsIcon={logoFE} skills={SKILLS} />
+        <SkillsBox title={'Mobile & Cross-Platform'} skillsIcon={logoFE} skills={SKILLS} />
         <SkillsBox title={'Backend-Grundkenntnisse'} skillsIcon={logoFE} skills={SKILLS} />
       </div>
 
