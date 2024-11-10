@@ -14,8 +14,8 @@ function ProjectItem({ image, title, description }) {
       </div>
 
       <div className="project-text">
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <div className='project-title'>{title}</div>
+        <div className='project-description'>{description}</div>
       </div>
     </div>
   )

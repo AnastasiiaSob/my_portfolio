@@ -15,9 +15,9 @@ export type ProjectType = {
 }
 
 const mockProjectsData = [
-  { id: 1, title: 'Portfolio Website', description: 'A personal portfolio to showcase my projects.', image: landwirtschaft },
-  { id: 2, title: 'E-commerce Site', description: 'A full-stack e-commerce website.', image: tourism },
-  { id: 3, title: 'To-Do App', description: 'A simple to-do list application using React.', image: petproject },
+  { id: 1, title: 'Portfolio Website', description: 'I worked on several projects on a long term, where I contribute to the long term customer success. It’s not only about the code - it’s about impact on people.', image: landwirtschaft },
+  { id: 2, title: 'E-commerce Site', description: 'A full-stack e-commerce website.I worked on several projects on a long term, where I contribute to the long term customer success. It’s not only about the code - it’s about impact on people.', image: tourism },
+  { id: 3, title: 'To-Do App', description: 'A simple to-do list application using React.I worked on several projects on a long term, where I contribute to the long term customer success. It’s not only about the code - it’s about impact on people.', image: petproject },
 ]
 
 function ProjectsOverview() {
@@ -41,11 +41,11 @@ function ProjectsOverview() {
   return (
     <section id="projects" className="projects wrapper">
       <div className="projects-header">
-        <h3>My Work</h3>
-        <p>
+        <h2>My Work</h2>
+        <h3>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima facere debitis qui fuga? Iusto natus, ipsa possimus ea cum ipsam
           quos adipisci quidem unde provident rem, cupiditate assumenda vitae molestias.
-        </p>
+        </h3>
       </div>
       <div className="projects-list">
         {/** image and text are props in ProjectItem component */}
