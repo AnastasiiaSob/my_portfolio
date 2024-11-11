@@ -7,15 +7,18 @@ import React from 'react'
 Functional components: modern, simpler, use Hooks for state and side effects.
  */
 function ProjectItem({ image, title, description }) {
-  return(
+  return (
     <div className="project-item">
       <div className="project-image">
         <img src={image} alt="project-logo" />
       </div>
 
-      <div className="project-text">
-        <div className='project-title'>{title}</div>
-        <div className='project-description'>{description}</div>
+      <div className="project-content">
+        <div className="project-title">{title}</div>
+        <div className="project-description">{description}</div>
+        <button className="primary-button" onClick={() => console.log('hello')}>
+          See My Projects
+        </button>
       </div>
     </div>
   )

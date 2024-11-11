@@ -2,16 +2,16 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 
 interface FormData {
-  name: string, 
-  topic: string,
-  email: string,
+  name: string
+  topic: string
+  email: string
   message: string
 }
 
 interface FormErrors {
-  name?: string, 
-  topic?: string,
-  email?: string,
+  name?: string
+  topic?: string
+  email?: string
   message?: string
 }
 
@@ -35,7 +35,7 @@ function ContactForm() {
   }
 
   const validateForm = (): FormErrors => {
-    let errors: FormErrors = {};
+    let errors: FormErrors = {}
     if (!formData.name) errors.name = 'Name if requred!'
     if (!formData.topic) errors.topic = 'Topic is required'
     if (!formData.email) errors.email = 'Email is required'
@@ -84,7 +84,9 @@ function ContactForm() {
               <textarea name="message" placeholder="Your message" value={formData.message} onChange={handleChange} />
               {formErrors.message && <p className="error">{formErrors.message}</p>}
             </div>
-            <button type="submit">Submit</button>
+            <button className="primary-button" type="submit">
+              Submit
+            </button>
           </div>
         )}
       </form>

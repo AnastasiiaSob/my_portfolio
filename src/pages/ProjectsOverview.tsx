@@ -6,18 +6,35 @@ import landwirtschaft from '../assets/projects/landwirtschaft.jpg'
 import tourism from '../assets/projects/urlaub.jpg'
 import petproject from '../assets/projects/pet-project.jpg'
 
-
 export type ProjectType = {
-  readonly id: number,
-  title: string,
-  description: string,
+  readonly id: number
+  title: string
+  description: string
   image: string
 }
 
 const mockProjectsData = [
-  { id: 1, title: 'Portfolio Website', description: 'I worked on several projects on a long term, where I contribute to the long term customer success. It’s not only about the code - it’s about impact on people.', image: landwirtschaft },
-  { id: 2, title: 'E-commerce Site', description: 'A full-stack e-commerce website.I worked on several projects on a long term, where I contribute to the long term customer success. It’s not only about the code - it’s about impact on people.', image: tourism },
-  { id: 3, title: 'To-Do App', description: 'A simple to-do list application using React.I worked on several projects on a long term, where I contribute to the long term customer success. It’s not only about the code - it’s about impact on people.', image: petproject },
+  {
+    id: 1,
+    title: 'Portfolio Website',
+    description:
+      'I worked on several projects on a long term, where I contribute to the long term customer success. It’s not only about the code - it’s about impact on people.',
+    image: landwirtschaft,
+  },
+  {
+    id: 2,
+    title: 'E-commerce Site',
+    description:
+      'A full-stack e-commerce website.I worked on several projects on a long term, where I contribute to the long term customer success. It’s not only about the code - it’s about impact on people.',
+    image: tourism,
+  },
+  {
+    id: 3,
+    title: 'To-Do App',
+    description:
+      'A simple to-do list application using React.I worked on several projects on a long term, where I contribute to the long term customer success. It’s not only about the code - it’s about impact on people.',
+    image: petproject,
+  },
 ]
 
 function ProjectsOverview() {
@@ -54,9 +71,6 @@ function ProjectsOverview() {
               <ProjectItem key={project.id} image={project.image} title={project.title} description={project.description} />
             ))
           : null}
-      </div>
-      <div>
-        <button onClick={handleNavigate}>More about my projects</button>
       </div>
     </section>
   )

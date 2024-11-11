@@ -13,6 +13,7 @@
 :root {
   --primary-light: #ff7f23;
   --primary-dark: #994c15;
+  --secondary-pale-orange: #ff974b;
   --secondary-grey: #393838;
   --bg-grey-dark: #232323;
   --bg-grey-light: #303030;
@@ -97,16 +98,29 @@ textarea {
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
+  padding: 16px 32px;
+  border-radius: 60px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
+.primary-button {
+  background-color: var(--primary-light);
+  color: var(--black);
+  border: none;
+}
+
+.primary-button:hover {
+  background-color: var(--secondary-pale-orange);
+}
+
+.secondary-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-light);
+  border: 1px solid var(--primary-light);
+}
+
+.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 /* General elements */
@@ -212,6 +226,12 @@ button:hover {
   border-radius: 20px;
 }
 
+.about-me-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
 /* Skills */
 
 .skills {
@@ -260,12 +280,13 @@ button:hover {
 
 /* My Projects */
 
-.project-text {
+.project-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 12px;
+  gap: 24px;
   padding: 48px;
+  align-items: flex-start;
 }
 
 .project-title {
@@ -302,13 +323,13 @@ button:hover {
   display: flex;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-
+  height: 357px;
 }
 
 .project-image img {
   width: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
   border-radius: 20px 0px 0px 20px;
 }
