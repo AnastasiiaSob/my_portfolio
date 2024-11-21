@@ -17,8 +17,10 @@
   --secondary-grey: #393838;
   --bg-grey-dark: #232323;
   --bg-grey-light: #303030;
+  --bg-transparent: rgba(255, 255, 255, 0.1);
   --black: #000000;
   --white: #ffffff;
+  --border-radius: 20px;
 }
 
 html,
@@ -114,7 +116,7 @@ button {
 }
 
 .secondary-button {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--bg-transparent);
   color: var(--primary-light);
   border: 1px solid var(--primary-light);
 }
@@ -223,7 +225,7 @@ button {
   height: 30rem;
   width: 30rem;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
 }
 
 .about-me-buttons {
@@ -266,7 +268,7 @@ button {
   aspect-ratio: 1 / 1;
   padding: 40px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--bg-transparent);
   color: var(--white);
   max-width: 160px;
   border: 5px solid;
@@ -321,8 +323,8 @@ button {
 .project-item {
   cursor: pointer;
   display: flex;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  background-color: var(--bg-transparent);
+  border-radius: var(--border-radius);
   height: 357px;
 }
 
@@ -331,7 +333,7 @@ button {
   display: block;
   object-fit: cover;
   height: 100%;
-  border-radius: 20px 0px 0px 20px;
+  border-radius: var(--border-radius) 0px 0px var(--border-radius);
 }
 
 /* Contact form */
@@ -349,6 +351,22 @@ button {
   flex-direction: column;
 }
 
+.contact-form-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.topic {
+  grid-column: span 2 / span 2;
+}
+
+.message {
+  grid-column: span 2 / span 2;
+  grid-row-start: 3;
+}
+
 .contact-info {
   display: flex;
   flex-basis: 100%;
@@ -359,9 +377,9 @@ button {
 .contact-form-container {
   max-width: 500px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
+  padding: 80px;
+  background-color: var(--bg-transparent);
+  border-radius: var(--border-radius);
 }
 
 .error {

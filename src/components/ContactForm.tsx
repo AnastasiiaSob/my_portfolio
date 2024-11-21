@@ -63,21 +63,21 @@ function ContactForm() {
         {successMessage !== '' ? (
           <p className="success-message">{successMessage}</p>
         ) : (
-          <div>
+          <div className='contact-form-fields'>
             <div className="name">
               <label>Name</label>
               <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" />
               {formErrors.name && <p className="error">{formErrors.name}</p>}
             </div>
-            <div className="topic">
-              <label>Topic</label>
-              <input type="text" name="topic" value={formData.topic} onChange={handleChange} placeholder="Job offer" />
-              {formErrors.topic && <p className="error">{formErrors.topic}</p>}
-            </div>
             <div className="email">
               <label>Your E-Mail</label>
               <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Job offer" />
               {formErrors.email && <p className="error">{formErrors.email}</p>}
+            </div>
+            <div className="topic">
+              <label>Topic</label>
+              <input type="text" name="topic" value={formData.topic} onChange={handleChange} placeholder="Job offer" />
+              {formErrors.topic && <p className="error">{formErrors.topic}</p>}
             </div>
             <div className="message">
               <label>Your message</label>
