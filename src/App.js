@@ -1,12 +1,12 @@
 import React from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Home from '../src/Home'
-import AboutMe from './pages/AboutMe'
-import Contact from './pages/Contact'
-import Footer from './pages/Footer'
-import NavBar from './pages/NavBar'
-import NotFound from './pages/NotFound'
-import ProjectsDetail from './pages/ProjectsDetails'
+import AboutMe from './sections/AboutMe'
+import Contact from './sections/Contact'
+import Footer from './sections/Footer'
+import NavBar from './sections/NavBar'
+import NotFound from './sections/NotFound'
+import ProjectsDetail from './sections/ProjectsDetails'
 import './styles/styles.css'
 
 function App() {

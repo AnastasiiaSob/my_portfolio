@@ -1,7 +1,7 @@
-import AboutMe from './pages/AboutMe'
-import Skills from './pages/Skills'
-import ProjectsOverview from './pages/ProjectsOverview'
-import Contact from './pages/Contact'
+import AboutMe from './sections/AboutMe'
+import Skills from './sections/Skills'
+import ProjectsOverview from './sections/ProjectsOverview'
+import Contact from './sections/Contact'
 import React from 'react'
 
 function Home() {

@@ -393,6 +393,12 @@ button {
   margin-bottom: 16px;
 }
 
+/* Background Feature */
+
+.background-feature-container {
+  background-color: var(--primary-light);
+}
+
 /* Footer */
 
 .footer {

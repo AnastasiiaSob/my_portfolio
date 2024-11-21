@@ -1,5 +1,5 @@
 import React from 'react'
-import { SkillType } from '../pages/Skills';
+import { SkillType } from '../sections/Skills';
 // Class components: older, more complex, use this, lifecycle methods.
 // Functional components: modern, simpler, use Hooks for state and side effects.
 
