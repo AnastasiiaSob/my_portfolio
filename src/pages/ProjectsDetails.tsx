@@ -1,7 +1,7 @@
 import './../styles/styles.css'
 import React, { useEffect, useState } from 'react'
 import ProjectItem from '../components/ProjectItem'
-import { ProjectType } from './ProjectsOverview'
+import { ProjectType } from '../sections/ProjectsOverview'
 import landwirtschaft from '../assets/projects/landwirtschaft.jpg'
 import tourism from '../assets/projects/urlaub.jpg'
 import petproject from '../assets/projects/pet-project.jpg'

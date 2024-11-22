@@ -1,8 +1,11 @@
 import React from 'react'
+import munichBg from '../assets/images/munich.png'
 import { useEffect, useState } from 'react'
 
 function BackgroundFeature() {
-  return <div className='background-feature-container'></div>
+  return <div className='background-feature-container'>
+    <img src={munichBg} alt="" />
+  </div>
 }
 
 export default BackgroundFeature

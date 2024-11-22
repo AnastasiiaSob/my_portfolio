@@ -3,6 +3,7 @@ import Skills from './sections/Skills'
 import ProjectsOverview from './sections/ProjectsOverview'
 import Contact from './sections/Contact'
 import React from 'react'
+import LocationInfo from './sections/LocationInfo'
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Skills />
       <ProjectsOverview />
       <Contact />
+      <LocationInfo />
     </>
   )
 }
