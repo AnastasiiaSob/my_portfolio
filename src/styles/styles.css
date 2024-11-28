@@ -21,6 +21,7 @@
   --black: #000000;
   --white: #ffffff;
   --border-radius: 20px;
+  --semi-bold: 600;
 }
 
 html,
@@ -109,6 +110,7 @@ button {
   background-color: var(--primary-light);
   color: var(--black);
   border: none;
+  font-weight: var(--semi-bold);
 }
 
 .primary-button:hover {
@@ -119,6 +121,7 @@ button {
   background-color: var(--bg-transparent);
   color: var(--primary-light);
   border: 1px solid var(--primary-light);
+  font-weight: var(--semi-bold);
 }
 
 .secondary-button:hover {
