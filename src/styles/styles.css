@@ -396,7 +396,17 @@ button {
 /* Background Feature */
 
 .background-feature-container {
-  background-color: var(--primary-light);
+  position: relative;
+  width: 100%; 
+  height: 800px;
+  overflow: hidden;
+}
+
+.cropped-image{
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 800px;
 }
 
 /* Footer */

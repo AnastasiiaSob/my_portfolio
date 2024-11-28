@@ -3,9 +3,9 @@ import BackgroundFeature from '../components/BackgroundFeature'
 
 function LocationInfo() {
   return (
-    <div>
+
       <BackgroundFeature />
-    </div>
+
   )
 }
 

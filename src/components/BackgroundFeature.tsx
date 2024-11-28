@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 function BackgroundFeature() {
   return <div className='background-feature-container'>
-    <img src={munichBg} alt="" />
+    <img src={munichBg} alt="" className='cropped-image'/>
   </div>
 }
 
